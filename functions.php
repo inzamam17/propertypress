@@ -45,6 +45,45 @@ function propertypress_widgets_init(){
         'after_title' => '</h2>'
 
     ] );
+    // Register widget for footer first column
+
+    register_sidebar( [
+
+        'name' => esc_html__('Footer One', 'propertypress'),
+        'id' => 'main-sidebar',
+        'description' => esc_html__('Footer first column', 'propertypress'),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
+
+    ] );
+    // Register widget for footer second column
+
+    register_sidebar( [
+
+        'name' => esc_html__('Footer Second', 'propertypress'),
+        'id' => 'main-sidebar',
+        'description' => esc_html__('Footer second column', 'propertypress'),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
+
+    ] );
+    // Register widget for footer first column
+
+    register_sidebar( [
+
+        'name' => esc_html__('Footer Three', 'propertypress'),
+        'id' => 'main-sidebar',
+        'description' => esc_html__('Footer third column', 'propertypress'),
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>'
+
+    ] );
 
 }
 

@@ -12,7 +12,7 @@
             
         <?php endif;?>
         <?php echo paginate_links()?>
-
+        <p>Archive.php</p>
     </main>
 </div>
 <?php get_sidebar();?>

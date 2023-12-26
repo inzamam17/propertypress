@@ -1,29 +1,19 @@
 <?php get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        
-        <h1><?php echo the_archive_title();?></h1>
-
-        <div class="author-info">
-
-            <p><?php echo the_author_meta( 'description', $post->post_author);?></p>
-           
-        </div>   
 
         <?php if(have_posts()): while( have_posts() ): the_post()?>
             
-            <?php get_template_part( 'template-parts/content', 'posts' );?>
+        <?php get_template_part( 'template-parts/content', 'page' );?>
 
         <?php endwhile; else:?>
             
             <?php get_template_part( 'template-parts/content' , 'none' );?>
             
         <?php endif;?>
-        <?php echo paginate_links()?>
-        <p>Author.php</p>
+            <p>page.php</p>
     </main>
-</div>
-<?php get_sidebar();?>
+</div
 
     
 <?php get_footer(); ?>

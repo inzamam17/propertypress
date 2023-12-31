@@ -3,7 +3,8 @@
     <main id="main" class="site-main">
         
         <?php get_template_part( 'template-parts/content' , 'none' );?>
-        
+
+        <?php get_search_form();?>
     </main>
 </div
 

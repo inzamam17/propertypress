@@ -90,4 +90,31 @@ function propertypress_widgets_init(){
 
 add_action('widgets_init', 'propertypress_widgets_init');
 
+
+function propertypress_set_excerpt_length($default_ex_length){
+
+$new_excerpt_length  = 100;
+
+return $new_excerpt_length;
+
+
+}
+
+add_filter( 'excerpt_length', 'propertypress_set_excerpt_length', 10, 1);
+
+function propertypress_modify_excerpt_more(){
+
+    global $post;
+
+    $new_read_more_link = '...<a class="excerpt-more-link" href="'.get_permalink( $post->ID ).'">'
+    .esc_html__( ' Read More', 'propertypress' ).
+    '</a>';
+
+    return $new_read_more_link;
+
+}
+
+
+add_filter( 'excerpt_more','propertypress_modify_excerpt_more', 10 );
+
 ?>

@@ -7,8 +7,7 @@
         <?php get_template_part( 'template-parts/content', 'page' );?>
 
         <?php endwhile; endif;?>
-        <?php get_sidebar();?>
-            <p>page.php</p>
+
     </main>
 </div
 

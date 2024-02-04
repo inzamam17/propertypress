@@ -1,0 +1,36 @@
+/*
+Stylesheet for admin elements
+*/
+
+.pp_extra_settings_container{
+    display: flex;
+}
+
+.extra_single_col{
+    width:100%;
+}
+
+.extra_two_third_col{
+    width:70%;
+}
+
+.extra_one_third_col{
+    width:30%;
+}
+
+.pp_extra_settings_component{
+
+    margin-bottom: 10px;;
+}
+
+.pp_extra_settings_component_title{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.pp_extra_settings_component_input input[type=text], .pp_extra_settings_component_input input[type=number]{
+    border: 1px solid #949494;
+    border-radius:5px;
+    box-shadow: 0 0 0 transparent;
+    padding: 2px 8px;
+    width: 100%;
+}

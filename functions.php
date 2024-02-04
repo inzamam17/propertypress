@@ -1,4 +1,7 @@
 <?php
+// Adding required files
+require_once(get_template_directory().'/inc/property-meta-fields.php');
+
 // Added basic theme support options
 add_theme_support( 'title-tag');
 add_theme_support( 'html5');
@@ -14,11 +17,21 @@ add_theme_support( 'post-formats', ['aside', 'video', 'gallery']);
 function propertypress_enqueue_style(){
 
     // adding style.css
-wp_enqueue_style('main-css' , get_stylesheet_directory_uri().'/style.css', [], time() , 'all');
+	wp_enqueue_style('main-css' , get_stylesheet_directory_uri().'/style.css', [], time() , 'all');
 
 }
 
 add_action('wp_enqueue_scripts', 'propertypress_enqueue_style');
+
+// Adding admin to theme
+
+function propertypress_enqueue_admin_style(){
+
+	// adding admin stylesheet
+	wp_enqueue_style('admin-css' , get_stylesheet_directory_uri().'/inc/assets/admin-style.css', [], time() , 'all');
+
+}
+add_action( 'admin_enqueue_scripts', 'propertypress_enqueue_admin_style');
 
 
 // Register Mneu Locations
@@ -192,6 +205,8 @@ function propertypress_register_my_cpts() {
 }
 
 add_action( 'init', 'propertypress_register_my_cpts' );
+
+
 
 
 ?>

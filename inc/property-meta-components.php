@@ -19,7 +19,7 @@ add_action( 'add_meta_boxes', 'register_property_listing_extra');
 
 function property_listing_extra_html($post){
 
-    include( get_template_directory() . '/inc/forms/property-meta-fields-form.php' );
+    include( get_template_directory() . '/inc/forms/property-components-form.php' );
 }
 
 function update_property_listing_meta_box_values($post_id){

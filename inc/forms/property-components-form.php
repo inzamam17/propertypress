@@ -64,7 +64,7 @@ $p_address = get_post_meta( $post->ID, '_property_address', true);
                     <label>Car Parkings:</label>
                 </div>
                 <div class="pp_extra_settings_component_input">
-                    <input type="number" name="_property_car_kitchens" id="property_car_kitchens" value="<?php echo esc_attr($p_parkings);?>" />
+                    <input type="number" name="_property_parkings" id="_property_parkings" value="<?php echo esc_attr($p_parkings);?>" />
                 </div>
             </div>
             <!-- Setings component end-->

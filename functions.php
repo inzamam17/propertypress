@@ -1,6 +1,7 @@
 <?php
 // Adding required files
 require_once(get_template_directory().'/inc/property-meta-components.php');
+require_once(get_template_directory().'/inc/seo-meta-components.php');
 
 // Added basic theme support options
 add_theme_support( 'title-tag');

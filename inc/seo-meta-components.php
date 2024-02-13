@@ -9,7 +9,7 @@ function register_seo_settings_extra(){
         'seo_setting_extra_id',                 // Unique ID
         __( 'SEO Setting', 'propertypress' ),      // Box title
         'register_seo_settings_html',  // Content callback, must be of type callable
-        'post',
+        ['post', 'property_listing'],
         'side'                            // Post type
     );
 

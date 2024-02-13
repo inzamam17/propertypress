@@ -1,7 +1,8 @@
-// Template Name: Full Width
-// Template Post Type: password_get_info
+<?php 
 
-<?php get_header(); ?>
+// Template Name: Full Width
+
+get_header(); ?>
 <div id="primary" class="content-area extended">
     <main id="main" class="site-main">
 

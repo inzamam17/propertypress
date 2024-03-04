@@ -5,35 +5,39 @@ get_header(); ?>
 <div id="primary" class="content-area extended">
     <main id="main" class="site-main">
 
-        <?php
-            $cp_args = array(
+        <div class="properties-list">
 
-                'post_type' => 'property_listing',
-                'posts_per_page' => 10
+    
+            <?php
+                $cp_args = array(
 
-            );
-                
+                    'post_type' => 'property_listing',
+                    'posts_per_page' => 10
 
-            $pl_post_data = new WP_Query($cp_args);
+                );
+                    
 
-            if( $pl_post_data->have_posts() ):
+                $pl_post_data = new WP_Query($cp_args);
 
-                while( $pl_post_data->have_posts() ):
+                if( $pl_post_data->have_posts() ):
 
-                    $pl_post_data->the_post();
+                    while( $pl_post_data->have_posts() ):
 
-                    get_template_part( 'template-parts/content', 'property-posts'  );
+                        $pl_post_data->the_post();
 
-                endwhile; 
+                        get_template_part( 'template-parts/content', 'property-posts'  );
 
-            else:
+                    endwhile; 
 
-                et_template_part( 'template-parts/none' );
+                else:
 
-            endif;
+                    et_template_part( 'template-parts/none' );
 
-            wp_reset_postdata();
-        ?>
+                endif;
+
+                wp_reset_postdata();
+            ?>
+        </div>
 
     </main>
 </div

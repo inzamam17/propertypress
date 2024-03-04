@@ -1,31 +1,22 @@
-<?php get_header(); ?>
-<div id="primary" class="content-area">
+<?php 
+
+get_header(); ?>
+
+<div id="primary" class="content-area extended">
     <main id="main" class="site-main">
 
-        <?php
+        <?php if(have_posts()): while( have_posts() ): the_post()?>
             
+        <?php get_template_part( 'template-parts/content', 'property' );?>
 
-            if( have_posts() ):
-
-                while( have_posts() ): the_post();
-
-                    
-                the_title( '<h1>', '</h1>');
-
-                endwhile; 
-
-            else:
-
-                et_template_part( 'template-parts/none' );
-
-            endif;
-
-            wp_reset_postdata();
-        ?>
+        <?php endwhile; else:?>
+            
+            <?php get_template_part( 'template-parts/content' , 'none' );?>
+            
+        <?php endif;?>
 
     </main>
-</div>
-<?php get_sidebar();?>
+</div
 
     
 <?php get_footer(); ?>
